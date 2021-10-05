@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+.body{
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.block {
+    width: 40%;
+    height: 400px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-red {
+    background-color: red;
+    margin-right: 15px;
+}
+
+.bg-green {
+    background-color: green;
+}
+
+.bg-blue {
+    background-color: blue;
+    margin-left: 15px;
+}
+
