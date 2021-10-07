@@ -1,22 +1,26 @@
 * {
     box-sizing: border-box;
-}
-.body{
     margin: 0;
 }
 
+
 .container {
-    width: 100%;
+    margin: 0px;
+    margin-bottom: 15px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.body{
+    margin: 0px;
 }
 
 .block {
-    width: 40%;
+    width: calc((100% - 30px) / 3);
     height: 400px;
     color: white;
     display: flex;
-    justify-content: center;
+    justify-content: ar;
     align-items: center;
 }
 
@@ -33,4 +37,3 @@
     background-color: blue;
     margin-left: 15px;
 }
-
