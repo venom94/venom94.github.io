@@ -18,6 +18,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;;
+    width: 30%;
 }
 .bg-left {
     margin-right: 15px;
