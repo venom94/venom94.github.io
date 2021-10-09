@@ -1,9 +1,11 @@
-body{
-    margin: 0;
+.gif img {
+    position: relative;
+    animation-name: example;
+    animation-iteration-count: infinite;
 }
 
-.button{
-    background-color: blue;
-    width: 150px;
-    height: 150px;
+@keyframes example{
+    100% {
+        left:0px; top:0px
+    }
 }
