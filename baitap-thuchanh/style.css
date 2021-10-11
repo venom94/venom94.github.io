@@ -1,11 +1,32 @@
-.gif img {
-    position: relative;
-    animation-name: example;
+
+.heart img {
+    position: absolute;
+    top: 200px;
+    left: calc((100% - 360px) /2);
+    animation-name: beat;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
 }
 
-@keyframes example{
-    100% {
-        left:0px; top:0px
+@keyframes beat {
+    20% {
+        transform: scale(2); 
+    }
+
+    40% {
+        transform: scale(1.5); 
+    }
+
+    60% {
+        transform: scale(2);
+    }
+    80% {
+        transform: scale(1);
     }
 }
+
+
+
+
+
+
