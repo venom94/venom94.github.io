@@ -1,3 +1,58 @@
+* {
+    box-sizing: border-box;
+    background-color: lightpink;
+    font-size: 12px;
+}
+
+ul li {
+    list-style: none;
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #999;
+    background-color: white;
+    padding: 0 0 0 10px;
+}
+.menu {
+    width: 200px;
+    line-height: 40px;
+    height: 100%;
+    background-color: white;
+    color: #999;
+}
+.menu ul {
+    padding: 0px 0px 10px 10px;
+    margin: 0;
+}
+
+.menu {
+    position: relative;
+}
+.box {
+    padding: 8px 0 12px;
+    visibility: hidden;
+    position: absolute;
+    width: 200px;
+    list-style: none;
+    left: 200px;
+    top: 0;
+    background-color: #fff;
+    box-shadow: 0 0 4px 0 rgb(0 0 0 / 25%);
+}
+
+.box a {
+    padding: 0;
+}
+
+.menu > li:hover .box {
+    display: block;
+}
+
+
+
+
 
 
 
