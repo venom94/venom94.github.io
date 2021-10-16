@@ -21,15 +21,13 @@ a {
     height: 100%;
     background-color: white;
     color: #999;
+    position: relative;
 }
 .menu ul {
-    padding: 0px 0px 10px 10px;
+    padding: 0;
     margin: 0;
 }
 
-.menu {
-    position: relative;
-}
 .box {
     padding: 8px 0 12px;
     display: none;
@@ -42,28 +40,37 @@ a {
     box-shadow: 0 0 4px 0 rgb(0 0 0 / 25%);
 }
 
-.box a {
+.menu > ul > li > ul {
+    padding: 0 0 10px 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.menu .box a {
     padding: 0;
 }
 
-.menu > li:hover .box {
+.menu > ul > li:hover .box {
     display: block;
 }
 
-.menu > li:hover {
-    display: block;
+.menu li:hover > a,.menu li:hover > i {
+    color: red
 }
 
-li {
+/* .menu li:hover > i {
+    color: red
+} */
+
+.menu li {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-i {
-    display: none;
-    
-}
+
+
+
 
 
 
