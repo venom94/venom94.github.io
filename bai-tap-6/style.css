@@ -32,8 +32,8 @@ a {
 }
 .box {
     padding: 8px 0 12px;
-    visibility: hidden;
-    position: absolute;
+    display: none;
+    position:absolute;
     width: 200px;
     list-style: none;
     left: 200px;
@@ -49,6 +49,12 @@ a {
 .menu > li:hover .box {
     display: block;
 }
+
+.menu > li:hover {
+    display: block;
+}
+
+
 
 
 

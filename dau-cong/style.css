@@ -1,0 +1,15 @@
+.plus {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 300px 300px 300px;
+}
+
+.plus-1 {
+    grid-area : 1 / 2 /4 / 3;
+    background-color: red;
+}
+
+.plus-2 {
+    grid-area : 2 / 1 /3 / 4;
+    background-color: red;
+}
