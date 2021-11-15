@@ -5,52 +5,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BaiTapJavaScript</title>
+    <title>BaiTapVongLap</title>
 </head>
 
 <body>
     <script>
-        function bt1TinhBinhPhuong1So(x1) {
-            return (x1 * x1)
+        function baiTap1(x1) {
+            let str = x1 + "-";
+            return str.repeat(9) + x1;
         }
 
-        function bt2TinhTheKi1Nam(x2) {
-            let a2 = x2
-            let b2 = 100
-            let c2 = Math.floor(x2 / 100) + 1
-            return (c2)
+        // function baiTap2(x2) {
+        //     if (x2 = 0) {
+        //         return 1;
+        //     }
+        //     else {
+        //         while (x2 >0 ) {
+        //             return("<p>" + i + ". Em hứa sẽ làm bài tập ở nhà đầy đủ</p>");
+        //             i++;
+        //         }
+        //     }
+
+        function baiTap3(s) {
+            return s.split("").reverse().join("");
         }
 
-        function bt3CatChuoi(x3) {
-            let str = x3;
-            let result3 = str.substr(0, 10) + "...";
-            return result3;
+        function baiTap4() {
+
         }
 
-        function bt4BienChuoiThanhVietHoa(x4) {
-            let str1 = x4;
-            let str2 = str1.toUpperCase();
-            let str3 = str2.substr(0, 1);
-            let str4 = str1.toLowerCase();
-            let str5 = str4.substr(1);
-            let result4 = str3 + str5;
-            return result4;
+        function baiTap5() {
+
         }
 
-        function bt5TimMin(x5, x51, x52, x53, x54) {
-            return Math.min(x5, x51, x52, x53, x54);
-        }
+        function baiTap6() {
 
-        function bt6SapXepTen(x61, x62, x63, x64, x65) {
-            let str61 = x61;
-            let str62 = x62;
-            let str63 = x63;
-            let str64 = x64;
-            let str65 = x65;
-            const xapSep = [str61, str62, str63, str64, str65];
-            let danhSach = xapSep.sort();
-            return danhSach.join("<br>");
-            // document.write(danhSach.join("<br>"));
         }
     </script>
 </body>

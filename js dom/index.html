@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM
+    </title>
+</head>
+
+<body>
+    <p id="p1"> Sáng 12/11/2021 tại Hà Nội, Bộ Y tế phối hợp với Tổng Hội Y học Việt Nam tổ chức hội nghị khoa học toàn
+        quốc năm
+        2021 với chủ đề "Đại dịch COVID-19 và phòng, chống các bệnh không lây nhiễm: Chuyên đề hô hấp, tim mạch, ung
+        thư, đái tháo đường, tâm thần và bệnh hiếm" theo hình thức trực tuyến. GS.TS.Trần Văn Thuấn - Thứ trưởng Bộ Y
+        tế, PGS.TS.Nguyễn Thị Xuyên, nguyên Thứ trưởng Bộ Y tế - Chủ tịch Tổng Hội Y học Việt Nam đồng chủ trì hội nghị.
+
+    </p>
+    <p id="p2"> Tại điểm cầu Hà Nội, có sự tham dự của lãnh đạo và chuyên viên một số Vụ, Cục, đơn vị thuộc và trực
+        thuộc Bộ Y
+        tế; Tổ chức Y tế Thế giới, lãnh đạo Bảo hiểm Xã hội Việt Nam; Liên hiệp các hội Khoa học và Kỹ thuật Việt Nam
+        cùng các giáo sư, tiến sỹ chuyên gia đầu ngành về lĩnh vực y tế.
+
+    </p>
+    <p id="p3">Điểm cầu trực tuyến có sự tham dự của đại diện Sở Y tế; Hội Y học, Bệnh viện Đa khoa tỉnh, CDC các tỉnh,
+        thành
+        phố, bệnh viện huyện và các cán bộ y tế trên toàn quốc và một số đơn vị liên quan.
+
+    </p>
+
+
+    <script>
+        // bai 1
+        function changeColor() {
+            document.getElementById("p1").style.color = 'blue';
+            document.getElementById("p2").style.color = 'yellow';
+            document.getElementById("p3").style.color = 'red';
+        }
+
+        //  bai 2
+        function changeBackgroundColor(X) {
+            document.querySelector('body').style.background = `${X}`;
+        }
+
+        // bai 3
+        function copyContent(paragraph1, paragraph2) {
+            let p1 = document.querySelector("#" + paragraph1);
+            let p2 = document.querySelector("#" + paragraph2);
+            p1.innerText = p2.innerText;
+        }
+
+        // bai 4
+        function changeFontSize(x) {
+            let changeSize = document.querySelectorAll("p");
+            for (let i = 0; i < changeSize.length; i++) {
+                changeSize[i].style.fontSize = x + "px";
+            }
+        }
+
+        //bai 5
+        function increaseFontSize(paragraph) {
+            let para = document.getElementById(paragraph);
+            const fontSize = parseFloat(para.style.fontSize);
+            if (fontSize <= 29) {
+                para.style.fontSize = fontSize + 1 + "px";
+            }
+        }
+
+        // bai 6
+        function decreaseFontSize(paragraph) {
+            let para = document.getElementById(paragraph);
+            const changeFontSize = parseFloat(para.style.fontSize);
+            if (changeFontSize >= 10) {
+                para.style.fontSize = changeFontSize - 1 + "px";
+            }
+        }
+    </script>
+</body>
+
+</html>
