@@ -20,6 +20,11 @@
 			width: 100%;
 			background: rgba(0,0,0,0.7);
 		}
+		p {
+			display:none;
+			color :#fff;
+			margin-bottom: 16px;
+		}
 		.content{
 			position: absolute;
 			top: 50%;
@@ -45,6 +50,11 @@
 			width: 100%;
 			display: flex;
 			background: rgba(255,255,255,0.94);
+		}
+		.error {
+			color : red;
+			display: none;
+			margin-top: 16px;
 		}
 		.field span{
 			color: #222;
@@ -78,7 +88,7 @@
 			display: block;
 		}
 		.pass{
-			text-align: left;
+			text-align: center;
 			margin: 10px 0;
 		}
 		.pass a{

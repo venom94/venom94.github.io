@@ -39,6 +39,11 @@
 			margin: 0 0 35px 0;
 			font-family: 'Montserrat',sans-serif;
 		}
+		.error {
+			color : red;
+			display: none;
+			margin-top: 16px;
+		}
 		.field{
 			position: relative;
 			height: 45px;
