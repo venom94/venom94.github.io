@@ -32,20 +32,26 @@
 					</div>                
 					<div class="field">
 						<span class="fa fa-user"></span>
-						<input type="text"  placeholder="Username">
+						<input type="text"  placeholder="Username" id='username'>
+					</div>
+					<div class="error" id="username-error"> Username must be at least 6 characters!
 					</div>
 					<div class="field space">
 						<span class="fa fa-lock"></span>
-						<input type="text" class="pass-key"  placeholder="Password">
+						<input type="text" class="pass-key"  placeholder="Password" id='password'>
 						<span class="show">SHOW</span>
+					</div>
+					<div class="error" id="password-error"> Password must be between 6 and 32 characters!
 					</div>
 					<div class="field space">
 						<span class="fa fa-lock"></span>
-						<input type="text" class="pass-key" placeholder="Confirm Password">
+						<input type="text" class="pass-key" placeholder="Confirm Password" id='confirm'>
 						<span class="show">SHOW</span>
+					</div>
+					<div class="error" id="confirm-error"> Confirm password is not correct!
 					</div>
 					<div class="field">
-						<button onclick="myFunction()">REGISTER</button>
+						<button onclick="validate()">REGISTER</button>
 					</div>
 				</div>
 			</div>
@@ -53,12 +59,39 @@
 	
 		<!-- JS -->
 		<script>
-			const  thongBao = document.querySelector("body");
-			function myFunction () { 
-				thongBao.innerHTML = "";    
-				if (thongBao.innerHTML === "") {
-					alert ("Đăng ký tài khoản thành công") ;
+			function getValue(id) {
+				return document.getElementById(id).value.trim();
+				// lay ra id 
+			}
+			function validate() {
+
+				let username = getValue('username');
+				if (username.length < 6 || username.length > 32 ) {
+					// flag = false;
+					document.getElementById('username-error').style.display = "block";
 				}
+				else {
+					document.getElementById('username-error').style.display = "none";
+				}
+				let password = getValue('password');
+				let confirmpass = getValue('confirm');
+				if (password.length < 6 || password.length > 32 ) {
+					document.getElementById('password-error').style.display = "block";
+				}
+				else {
+					document.getElementById('password-error').style.display = "none";
+				}
+				if (password == confirmpass ) {
+					document.getElementById('confirm-error').style.display = "none";
+				}
+				else {
+					document.getElementById('confirm-error').style.display = "block";;
+				}
+				// if (document.getElementById('username-error').style.display = "none" &&
+				// 	document.getElementById('password-error').style.display = "none" &&
+				// 	document.getElementById('confirm-error').style.display = "none" ) {
+				// 		document.getElementsByClassName(bg-img).innerHTML=""
+				// 	}					
 			}
 		</script>
 	</body>
