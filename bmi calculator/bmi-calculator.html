@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI CALCULATOR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2 style="color :#fff
+    ">BẢNG TÍNH CHỈ SỐ BMI</h2>
+        <div class="box">
+            <form class="form">
+                <input type="text" required placeholder="Chiều Cao (đơn vị cm)" id="chieu-cao" />
+                <input type="text" required placeholder="Cân Nặng (đơn vị kg)" id="can-nang" />
+                <button type="button" class="btn" onclick="global()">
+                    Tính Toán Chỉ Số BMI
+                </button>
+                <div class="thong-bao" id="thong-bao">
+                    <p id="ket-qua"></p>
+                    <p id="loi-khuyen"></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let weight,high,result 
+        let changBackGround = document.getElementById("thong-bao").style
+        function global() {
+            tinhToan();
+            ketQua();
+        }
+
+        function tinhToan() {
+             weight = +(document.getElementById("can-nang").value);
+             high = +(document.getElementById("chieu-cao").value)/100;
+             result = weight / (high ** 2)
+            return result;
+        }
+        function ketQua() {
+            document.getElementById("ket-qua").innerHTML = `Chỉ số BMI của bạn là : ${result.toFixed(2)}`;
+            document.getElementById("thong-bao").style = "display : block";
+            if ( result > 40) {
+                document.getElementById("loi-khuyen").innerHTML = "BÉO LẮM RỒI ĐẤY";
+            }
+            else if ( result > 35 ) {
+                document.getElementById("loi-khuyen").innerHTML = "BÉO CẤP 2";
+            }
+            else if ( result > 30) {
+                document.getElementById("loi-khuyen").innerHTML = "BÉO CẤP 1";
+            }
+            else if ( result >= 25 ) {
+                document.getElementById("loi-khuyen").innerHTML = "BẮT ĐẦU BƯỚC VÀO TRẠNG THÁI BÉO RỒI";
+            }
+            else if ( result > 18.5 ) {
+                document.getElementById("loi-khuyen").innerHTML = "OK ngon lành rồi đấy duy trì nhé";
+            }
+            else  {
+                document.getElementById("loi-khuyen").innerHTML = "Hơi gầy , ăn uống nhiều vào nhé";
+            }
+        }
+    
+    </script>
+</body>
+
+</html>
