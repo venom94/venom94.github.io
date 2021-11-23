@@ -30,7 +30,6 @@
 
     <script>
         let weight,high,result 
-        let changBackGround = document.getElementById("thong-bao").style
         function global() {
             tinhToan();
             ketQua();
@@ -60,8 +59,11 @@
             else if ( result > 18.5 ) {
                 document.getElementById("loi-khuyen").innerHTML = "OK ngon lành rồi đấy duy trì nhé";
             }
-            else  {
+            else if ( result > 0 ) {
                 document.getElementById("loi-khuyen").innerHTML = "Hơi gầy , ăn uống nhiều vào nhé";
+            }
+            else {
+                document.getElementById("thong-bao").style = "display : none";
             }
         }
     
