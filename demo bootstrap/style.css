@@ -1,0 +1,12 @@
+.container-fluid {
+  margin-top : 50px;
+  display : flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border : 1px solid gray;
+
+}
+
+button {
+  margin : 10px;
+}
